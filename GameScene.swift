@@ -36,7 +36,7 @@ class GameScene: SKScene {
 
     
     func makeground(){
-        let background = SKSpriteNode(imageNamed:"background")
+        let background = SKSpriteNode(imageNamed:"Background")
         background.anchorPoint = CGPoint(x:0.5,y:1.0)
         background.position = CGPoint(x:size.width/2,y:size.height)
         background.zPosition = picture.background.rawValue
@@ -47,7 +47,7 @@ class GameScene: SKScene {
     }
     
     func beforeground(){
-        let beforeground = SKSpriteNode(imageNamed: "")
+        let beforeground = SKSpriteNode(imageNamed: "Ground")
         beforeground.anchorPoint = CGPoint(x:0.5,y:1.0)
         beforeground.position = CGPoint(x:0,y:GameBegin)
         beforeground.zPosition = picture.beforeground.rawValue

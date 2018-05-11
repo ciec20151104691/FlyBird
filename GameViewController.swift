@@ -14,20 +14,21 @@ class GameViewController:UIViewController{
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        if let skview = self.view as? SKView{
-            if skview.scene == nil{
-                //创建背景
-                
-                let hw = skview.bounds.size.height/skview.bounds.size.width
-                let bground ＝ GameScene(size: CGSize(width: 320, height: 320 * hw))
+        if let skview = self.view as? SKView {
+            if skview.scene == nil {
+                //  创建场景
+                let lw = skview.bounds.size.height / skview.bounds.size.width
+                let ground = GameScene(size:CGSize(width: 320, height: 320 * lw))
                 skview.showsFPS = true
                 skview.showsNodeCount = true
                 skview.showsPhysics = true
                 skview.ignoresSiblingOrder = true
                 
-                bground.scaleMode = .aspectFill
-                skview.presentScene(bground)
+                ground.scaleMode = .aspectFill
+                
+                skview.presentScene(ground)
             }
         }
-    }
-    }
+}
+}
+    
